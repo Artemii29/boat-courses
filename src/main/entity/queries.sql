@@ -12,3 +12,7 @@ COUNT(f) as catchCount
 FROM Fish f
 JOIN GoingOut go on go.fish = f.id
 GROUP BY f.type, go.dateOut, go.dateReturn
+3
+SELECT b.name go.fish from Boat b
+JOIN GoingOut go on b.id = go.boat_id
+WHERE go.fish > :value
