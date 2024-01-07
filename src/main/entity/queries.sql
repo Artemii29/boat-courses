@@ -10,7 +10,7 @@ GROUP BY name
 SELECT f.type go.dateOut go.dateReturn
 COUNT(f) as catchCount
 FROM Fish f
-JOIN GoingOut go on go.fish = f.id
+JOIN GoingOut go on go.fish_id = f.id
 GROUP BY f.type, go.dateOut, go.dateReturn
 3
 SELECT b.name go.fish from Boat b
